@@ -45,8 +45,9 @@ export const Filter = ({ value = "grid", onChange = () => {}, items = [] }) => {
         <Icon src={iconArrow} />
       </StyledButton>
       <ContainerMenu className={isShowList ? "d-block" : "d-none"}>
-        {items.map((item) => (
+        {items.map((item, index) => (
           <StyledButton
+            key={index}
             className="border-top-0"
             onClick={() => {
               onChange(item.id);

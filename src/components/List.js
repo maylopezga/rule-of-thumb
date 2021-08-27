@@ -50,7 +50,7 @@ export const List = ({
   progress,
   setIsVoteSent,
 }) => (
-  <StyledCard image={getImage(data?.picture)}>
+  <StyledCard image={getImage(data?.picture)} data-tetsid="ListCard">
     <div className="d-flex">
       <VoteButton vote={getVote(progress)} isDisabled />
       <TextContainer

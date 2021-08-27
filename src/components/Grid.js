@@ -93,7 +93,11 @@ export const Grid = ({
   setIsVoteSent,
   className,
 }) => (
-  <StyledCard className={className} image={getImage(data?.picture)}>
+  <StyledCard
+    className={className}
+    image={getImage(data?.picture)}
+    data-tetsid="GridCard"
+  >
     <Container>
       <StyledTextContainer
         name={data?.name}

@@ -29,11 +29,11 @@ const StyledIcon = styled.img`
  * @param {string} className - The class of component.
  * */
 export const VoteButton = ({
-  vote,
-  className = "",
   onChange = () => {},
-  isVote,
   isDisabled = false,
+  className = "",
+  isVote,
+  vote,
 }) => (
   <StyledButton
     type="button"
@@ -43,6 +43,6 @@ export const VoteButton = ({
     className={`d-block ${className}`}
     background={vote === "up" ? "#3cbbb4" : "#f9ad1d"}
   >
-    <StyledIcon src={vote === "up" ? up : down} alt="vote" />
+    <StyledIcon src={vote === "up" ? up : down} alt={vote} />
   </StyledButton>
 );

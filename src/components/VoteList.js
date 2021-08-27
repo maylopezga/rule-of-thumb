@@ -62,7 +62,7 @@ const CardContainer = ({ order, data, isMobile }) => {
  * @param {object} data - Poll information.
  * @param {bool} isMobile - Bool to validate the mobile view.
  * */
-export const VoteList = ({ order, data, isMobile }) => (
+export const VoteList = ({ order, data = [], isMobile }) => (
   <StyledContainer
     className={order === "grid" && "justify-content-between d-flex flex-wrap"}
     isMobile={isMobile}
