@@ -30,6 +30,17 @@ const StyledCard = styled.div.attrs((props) => ({
   padding-right: 10px;
 `;
 
+/**
+ * Show the cards in list view.
+ * @param {bool} isVoteSent - Bool to validate the voted.
+ * @param {string} vote - Vote to select.
+ * @param {object} data - Poll information.
+ * @param {function} handleSubmit - Function to send the selected vote.
+ * @param {object} progress - Votes information.
+ * @param {function} setVote - Function to call after vote is clicked.
+ * @param {function} setIsVoteSent - Function to call after retrun to vote is clicked.
+ * @param {string} className - The class of component.
+ * */
 export const List = ({
   isVoteSent,
   data,

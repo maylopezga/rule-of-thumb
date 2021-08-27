@@ -11,9 +11,16 @@ const StyledButton = styled.button`
   width: 50%;
 `;
 
+/**
+ * Button to call submit.
+ * @param {bool} disabled - Bool to disable the button.
+ * @param {string} name - The name of the button.
+ * @param {function} handleSubmit - Function to call after submit is clicked.
+ * @param {string} className - The class of component.
+ * */
 export const ButtonSubmit = ({
   disabled = false,
-  handleSubmit,
+  handleSubmit = () => {},
   name = "",
   className = "",
 }) => (

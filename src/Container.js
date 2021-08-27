@@ -7,6 +7,9 @@ import { TitleContainer } from "./components/TitleContainer";
 // Assets
 import { getData } from "./api/api";
 
+/**
+ * Component to get and show poll information.
+ **/
 export const Container = () => {
   const [order, setOrder] = useState("grid");
   const [info, setInfo] = useState([]);
@@ -46,6 +49,7 @@ export const Container = () => {
     const valueLowerCase = value.toLowerCase();
     return valueLowerCase.search(query.toLowerCase()) !== -1;
   };
+
   const handleSubmit = (query) => {
     const data = info.filter(
       (item) => getValue(item.name, query) || getValue(item.category, query)

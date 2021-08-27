@@ -26,6 +26,15 @@ const StyledIcon = styled.img`
   padding: 5px;
 `;
 
+/**
+ * Show the cards in grid view.
+ * @param {string} background - Color for background.
+ * @param {bool} isUp - Bool to show value in percentage.
+ * @param {string} alt - Name to alt img
+ * @param {number} percentage - Value of poll.
+ * @param {node} icon - Image to show.
+ * @param {string} className - The class of component.
+ * */
 const Bar = ({
   background,
   percentage,
@@ -47,6 +56,11 @@ const Bar = ({
   );
 };
 
+/**
+ * Show poll results in percentage.
+ * @param {object} progress - Votes information.
+ * @param {string} className - The class of component.
+ * */
 export const ProgressBar = ({ progress = {}, className = "" }) => {
   const totalProgress = progress?.positive + progress?.negative;
   const positiveProgres = getPercentage(progress?.positive, totalProgress);

@@ -20,6 +20,14 @@ const StyledIcon = styled.img`
   height: 100%;
 `;
 
+/**
+ * Show title container with the filter and search engine.
+ * @param {string} vote - Filter value.
+ * @param {function} onChange - Function to call after button is clicked.
+ * @param {bool} isDisabled - Bool to disable the button.
+ * @param {bool} isVote - Bool to show border of selected element.
+ * @param {string} className - The class of component.
+ * */
 export const VoteButton = ({
   vote,
   className = "",

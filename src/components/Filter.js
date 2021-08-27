@@ -23,6 +23,12 @@ const ContainerMenu = styled.div`
   z-index: 10;
 `;
 
+/**
+ * Dropdown to select an item.
+ * @param {string} value - The name of item selected.
+ * @param {object} items - Items to select.
+ * @param {function} onChange - Function to call after item is clicked.
+ * */
 export const Filter = ({ value = "grid", onChange = () => {}, items = [] }) => {
   const [isShowList, setIsShowList] = useState(false);
 

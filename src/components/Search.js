@@ -9,6 +9,10 @@ const StyledInput = styled.input`
   width: 50%;
 `;
 
+/**
+ * Component to find an element .
+ * @param {function} onSubmit - Function to call after submit is clicked.
+ * */
 export const Search = ({ onSubmit }) => {
   const formik = useFormik({
     initialValues: {

@@ -5,10 +5,16 @@ import malala from "../../static/malala.png";
 import mark from "../../static/mark.png";
 import kanye from "../../static/kanye.png";
 
+/**
+ * Validate the winning vote.
+ **/
 export const getVote = (votes) => {
   return votes?.positive > votes?.negative ? "up" : "down";
 };
 
+/**
+ * Return image to show.
+ **/
 export const getImage = (picture) => {
   const images = {
     "greta.png": greta,
@@ -30,6 +36,9 @@ const intervals = [
   { label: "second", seconds: 1 },
 ];
 
+/**
+ * Return formatted date.
+ **/
 export const getTime = (date) => {
   const previousDate = new Date(date).getTime();
   const seconds = Math.floor((Date.now() - previousDate) / 1000);
@@ -38,6 +47,9 @@ export const getTime = (date) => {
   return `${count} ${interval.label}${count === 1 ? "" : "s"} ago`;
 };
 
+/**
+ * Return votes in percentage.
+ **/
 export const getPercentage = (value, total) => {
   return ((value * 100) / total).toFixed(1);
 };

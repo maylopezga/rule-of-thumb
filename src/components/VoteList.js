@@ -12,6 +12,12 @@ const StyledContainer = styled.div.attrs((props) => ({
   flex-wrap: ${(props) => props.isMobile && "nowrap !important"};
 `;
 
+/**
+ * Show the correct view and save values in local storage.
+ * @param {string} order - Filter value.
+ * @param {object} data - Poll information.
+ * @param {bool} isMobile - Bool to validate the mobile view.
+ * */
 const CardContainer = ({ order, data, isMobile }) => {
   const [vote, setVote] = useState("");
   const [isVoteSent, setIsVoteSent] = useState(false);
@@ -50,6 +56,12 @@ const CardContainer = ({ order, data, isMobile }) => {
   );
 };
 
+/**
+ * Show poll data.
+ * @param {string} order - Filter value.
+ * @param {object} data - Poll information.
+ * @param {bool} isMobile - Bool to validate the mobile view.
+ * */
 export const VoteList = ({ order, data, isMobile }) => (
   <StyledContainer
     className={order === "grid" && "justify-content-between d-flex flex-wrap"}

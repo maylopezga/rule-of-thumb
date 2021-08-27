@@ -22,6 +22,13 @@ const StyledParagraph = styled.p`
   text-overflow: ellipsis;
 `;
 
+/**
+ * Show name and description of poll.
+ * @param {string} name - Name of poll.
+ * @param {string} description - Description of poll.
+ * @param {bool} isVoteSent - Bool to validate the voted.
+ * @param {string} className - The class of component.
+ * */
 export const TextContainer = ({
   name = "",
   description = "",

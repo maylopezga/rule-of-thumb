@@ -1,3 +1,6 @@
+/**
+ * Return the poll information .
+ **/
 export const getData = () => ({
   data: [
     {
